@@ -10,29 +10,24 @@ GraphicsCard::GraphicsCard() {
 	brand = "";
 	memorySize = 0;
 	price = 0;
-}
-GraphicsCard::GraphicsCard(string brand, int memorysize, double price) {
-	int size = 0;
+}GraphicsCard::GraphicsCard(string s, int memorysize, double price) {
+	// Assuming brand has enough capacity to hold the brand name
+	for (size_t i = 0; i < s.length(); i++) {
+		this->brand += s[i];
+	}
 
-	//calculating size
-	/*while (brand[size] != '\0') {
-		size++;
-	}*/
-	//copying name
-	//for (int i = 0;i < size;i++) {
-		this->brand = brand;
-//	}
 	this->memorySize = memorysize;
 	this->price = price;
 }
+
 void GraphicsCard::setbrand(string s) {
-	int size = 0;
-	while (s[size] != '\0') {
-		size++;
+	// Assuming brand has enough capacity to hold the new brand name
+	this->brand = ""; // Clear the brand string
+	for (size_t i = 0; i < s.length(); i++) {
+		this->brand += s[i];
 	}
-	for (int i = 0;i < size;i++)
-		this->brand[i] = s[i];
 }
+
 void GraphicsCard::setmemorysize(int s) {
 	this->memorySize = s;
 }
@@ -49,9 +44,9 @@ double GraphicsCard::getprice() {
 	return price;
 }
 void GraphicsCard::show() {
-	cout << "Brand of GraphicCard is :" << brand << endl;
-	cout << "size of GraphicCard is :" << memorySize<<"GB" << endl;
-	cout << "price of GraphicCard is :" <<"Rs :" << price << endl;
+	cout << "Brand of GraphicCard is :" << this->brand << endl;
+	cout << "size of GraphicCard is :" << this->memorySize<<"GB" << endl;
+	cout << "price of GraphicCard is :" <<"Rs :" << this->price << endl;
 
 }
 
@@ -98,29 +93,10 @@ GraphicsCard* GraphicsCard::userimplementation(int g) {
 	}
 
 	if(g==2) {
-		cout << "Apple has integrated GPU" << endl;
-		cout << "Press 1 if you want to add external graphic card in Apple " << endl;
-
-		cin >> c;
-		if (c == 1) {
-			cout << "Enter size for apple external card" << endl;
-			cin >> c1;
-			while (c1 < 2 || c1 >24) {
-				if (c1 < 2 || c1>24) {
-					cout << " Incorrect external card size " << endl;
-					cin >> size;
-				}
-			}
-			GraphicsCard* applecard1=new GraphicsCard("AMD apple card", c1, 15000);
-			MeraGraphiccard = applecard1;
-
-			return  MeraGraphiccard;
-		}
-		if (c != 1) {
-			GraphicsCard* applecard2 = new GraphicsCard("No external Graphic Card", 0, 0);
-			MeraGraphiccard = applecard2;
-
-			return  MeraGraphiccard;
-		}
+		cout << "Apple has integrated GPU inside CPU" << endl;
+		
+			
+		
+		
 	}
 }
