@@ -3,8 +3,7 @@
 void AppleAssembly::display() {
 	computer->show();
 	cout << endl;
-	graphiccard->show();
-	cout << endl;
+	
 	storagedevice->show();
 	cout << endl;
 	networkcard->show();
@@ -76,7 +75,7 @@ AppleAssembly* AppleAssembly::userimplimentation() {
 	Computer* MeraComputer = Computer::userimplementation(g);
 
 	//GraphicsCard
-	GraphicsCard* MeraGraphiccard = GraphicsCard::userimplementation(g);
+//	GraphicsCard* MeraGraphiccard = GraphicsCard::userimplementation(g);
 	//Storage device
 	StorageDevice* MeraStorage = StorageDevice::userimplementation(g);
 	//NetworkCard
@@ -89,7 +88,7 @@ AppleAssembly* AppleAssembly::userimplimentation() {
 	//Case
 
 	Case* MeraCase = Case::userimplementation(g);
-	AppleAssembly* assemble2 = new AppleAssembly(MeraBattery, MeraCase, MeraComputer, nullptr, MeraNetwork, MeraPower, MeraStorage);
+	AppleAssembly* assemble2 = new AppleAssembly(MeraBattery, MeraCase, MeraComputer, MeraNetwork, MeraPower, MeraStorage);
 	return assemble2;
 
 }
