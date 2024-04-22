@@ -46,20 +46,21 @@ void NetworkCard::show() {
 }
 
 NetworkCard* NetworkCard::userimplementation(int g) {
-	cout << "      NetworkCard\n" << endl;
+	system("cls");	
+	cout << "  \t\t\t    NetworkCard\n" << endl;
 	NetworkCard* MeraNetwork = nullptr;
 	int brand3;
 	int speed;
 	double price3;
-	cout << "Enter Brand of NetworkCard 1 for NIC and 2 for Wirless NIC" << endl;
+	cout << "Enter Brand of NetworkCard 1 for NIC and 2 for Wirless NIC:";
 	cin >> brand3;
 	while (brand3 != 1 && brand3 != 2) {
 		if (brand3 != 1 || brand3 != 2) {
-			cout << "Enter correct network card" << endl;
+			cout << "Enter correct network card:";
 			cin >> brand3;
 		}
 	}
-	cout << "Enter speed of NetworkCard" << endl;
+	cout << "Enter speed of NetworkCard:";
 	cin >> speed;
 	//cout << "Enter price of NetworkCard" << endl;
 	//cin >> price3;

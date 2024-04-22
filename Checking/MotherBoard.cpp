@@ -75,10 +75,12 @@ void MotherBoard::initializeports() {
     porttype[3] = "HDMI port";
     porttype[4] = "display port";
 
-    cout << "      Ports\n" << endl;
+    system("cls");
+    //cout << "     \t\t   MotherBoard\n" << endl;
+    cout << "   \t\t\t   Ports\n" << endl;
     for (int i = 0; i < 5; i++) {
         MeraPort[i].settype(porttype[i]); // setting names in new ports
-        cout << "Enter Baud Rate in mbps for " << porttype[i] << endl;
+        cout << "Enter Baud Rate in mbps for " << porttype[i] << ":";
         cin >> portbaude_rate[i];
 
         // Validate the baud rate for each specific port type

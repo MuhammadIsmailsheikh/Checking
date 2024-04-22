@@ -46,24 +46,25 @@ void PowerSupply::show() {
 }
 
 PowerSupply* PowerSupply::userimplementation(int g) {
-	cout << "      PowerSupply\n" << endl;
+	system("cls");
+	cout << "    \t\t\t  PowerSupply\n" << endl;
 	PowerSupply* MeraPower = nullptr;
 	int efficiencyRating;
 	int wattage;
 	double price4;
-	cout << "Enter efficiencyRating of PowerSupply 1 for 80 PLus Bronze 2 for 80 Plus Gold" << endl;
+	cout << "Enter efficiencyRating of PowerSupply 1 for 80 PLus Bronze 2 for 80 Plus Gold:";
 	cin >> efficiencyRating;
 	while (efficiencyRating != 1 && efficiencyRating != 2) {
 		if (efficiencyRating != 1 || efficiencyRating != 2) {
-			cout << "Enter correct Power Supply" << endl;
+			cout << "Enter correct Power Supply:";
 			cin >> efficiencyRating;
 		}
 	}
-	cout << "Enter wattage in watts of PowerSupply" << endl;
+	cout << "Enter wattage in watts of PowerSupply:";
 	cin >> wattage;
 	while (wattage <30 || wattage>70) {
 		if (efficiencyRating <30 || efficiencyRating > 70) {
-			cout << "Enter correct wattage of Power Supply" << endl;
+			cout << "Enter correct wattage of Power Supply:";
 			cin >> wattage;
 		}
 	}

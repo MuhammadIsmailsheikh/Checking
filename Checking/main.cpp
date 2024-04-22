@@ -32,16 +32,16 @@ using namespace std;
 #include"Windows.h"
 #include"AppleAssembly.h"
 #include"Model.h"
-int g = 0;
+string g;
 int main() {
 	
 	unsigned int totalprice;
 
 
-	cout << "Enter Computer type (1 for Pc 2 for Mac)" << endl;
+	cout << "Enter Computer type (1 for Pc 2 for Mac):";
 	cin >> g;
-	while (g != 1 && g!= 2) {
-		if (g != 1 && g != 2) {
+	while (g != "1" && g != "2") {
+		if (g != "1" && g != "2") {
 			cout << "Enter correct computer type!" << endl;
 			cin >> g;
 		}
@@ -51,13 +51,15 @@ int main() {
 
 	
 	ComputerAssembly* assemble = nullptr;
-	cout << "Overall Specifications of computer you made is" << endl;
-	if (g == 1) {
+	cout << "\nOverall Specifications of computer you want are:" << endl;
+	system("pause");
+
+	if (g == "1") {
 		Windows* assemble1 = Windows::userimplimentation();
 		
 		assemble1->display();
 	}
-	if (g == 2) {
+	if (g == "2") {
 		AppleAssembly* assemble2 = AppleAssembly::userimplimentation();
 		
 		assemble2->display();

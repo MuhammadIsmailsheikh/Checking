@@ -27,7 +27,7 @@ int Battery::getcapacity() const {
 	}
 	Battery* Battery::userimplementation(int g) {
 
-		cout << "Enter MAH of battery" << endl;
+		cout << "Enter MAH of battery:";
 		int mah;
 		cin >> mah;
 		Battery* b = new Battery(mah, 9000);

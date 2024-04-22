@@ -46,8 +46,9 @@ std::string Case::getformfactor() {
 		string color;
 		int formFactor;
 		Case* MeraCase = nullptr;
-		cout << "      Case\n" << endl;
-		cout << "Enter color of case {1.Black , 2.Silver , 3.white , 4.Grey }" << endl;
+		system("cls");
+		cout << "    \t\t\t  Case\n" << endl;
+		cout << "Enter color of case {1.Black , 2.Silver , 3.white , 4.Grey }:";
 		int c;
 		cin >> c;
 		//cin >> color;
@@ -68,12 +69,16 @@ std::string Case::getformfactor() {
 			color = "Black";
 		}
 
-		cout << "Enter formFactor of case 1 for ATX 2 for MicroATX" << endl;
+		cout << "Enter formFactor of case 1 for ATX 2 for MicroATX:";
 		cin >> formFactor;
+		system("pause");
+		system("cls");
 		while (formFactor != 1 && formFactor != 2) {
 			if (formFactor != 1 || formFactor != 2) {
-				cout << "Enter correct formFactor of  Case" << endl;
+				cout << "Enter correct formFactor of  Case:";
 				cin >> formFactor;
+				system("pause");
+				system("cls");
 			}
 		}
 		if (formFactor == 1) {
@@ -86,4 +91,6 @@ std::string Case::getformfactor() {
 			MeraCase = MeraCase2;
 			return MeraCase;
 		}
+		system("cls");
    }
+	

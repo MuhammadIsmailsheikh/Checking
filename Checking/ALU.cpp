@@ -58,21 +58,22 @@ void ALU::show() {
 }
 
 ALU *ALU::userimplementation(int g) {
-	cout << "      ALU\n" << endl;
+	system("cls");	
+	cout << "     \t\t\t ALU\n" << endl;
 	ALU* MeraALU = nullptr;
 	int adder, substractor;
 	int Register, sizeofregister;
 	int hi;
-	cout << "Press 1 if you want to setup ALU otherwise press any number" << endl;
+	cout << "Press 1 if you want to setup ALU for default setup press any number:";
 	cin >> hi;
 	if (hi == 1) {
-		cout << "Enter No of adders" << endl;
+		cout << "Enter No of adders:";
 		cin >> adder;
-		cout << "Enter No of substractor" << endl;
+		cout << "Enter No of substractor:";
 		cin >> substractor;
-		cout << "Enter No of Registers" << endl;
+		cout << "Enter No of Registers:";
 		cin >> Register;
-		cout << "Enter sizeofRegister" << endl;
+		cout << "Enter sizeofRegister:";
 		cin >> sizeofregister;
 
 		return new ALU(adder, substractor, Register, sizeofregister);

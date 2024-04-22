@@ -30,11 +30,12 @@ void MainMemory::show() {
 }
 
 MainMemory* MainMemory:: userimplementation(int g) {
-	cout << "      MainMemory\n" << endl;
+	system("cls");
+	cout << "  \t\t\t    MainMemory\n" << endl;
 	int capacitymain;
 	string technologytype;
 
-	cout << "Enter capacity of memory" << endl;   // getting values from user
+	cout << "Enter capacity of memory:";   // getting values from user
 	cin >> capacitymain;
 	if (g == 1) {
 		while (capacitymain < 2 || capacitymain>256) {
@@ -48,18 +49,18 @@ MainMemory* MainMemory:: userimplementation(int g) {
 	if (g == 2) {
 		while (capacitymain < 4 || capacitymain>128) {
 			if (capacitymain < 4 || capacitymain>128) {
-				cout << "Enter correct size of Mainmemory" << endl;
+				cout << "Enter correct size of Mainmemory:";
 				cin >> capacitymain;
 			}
 		}
 
 	}
-	cout << "Enter technology Type" << endl;
+	cout << "Enter technology Type:\n1.Semiconductor.\n2.Silicon." << endl;
 	cin >> technologytype;
-	while (technologytype != "Semiconductor" && technologytype != "Silicon" && technologytype != "semiconductor" && technologytype != "silicon") {
+	while (technologytype != "1" && technologytype != "2" && technologytype != "1" && technologytype != "2") {
 
-		if (technologytype != "Semiconductor" && technologytype != "Silicon" && technologytype != "semiconductor" && technologytype != "silicon") {
-			cout << "Enter correct technology type" << endl;
+		if (technologytype != "1" && technologytype != "2" && technologytype != "1" && technologytype != "2") {
+			cout << "Enter correct technology type:";
 			cin >> technologytype;
 		}
 	}

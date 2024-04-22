@@ -58,34 +58,34 @@ GraphicsCard* GraphicsCard::userimplementation(int g) {
 	int c1;
 	Model m;
 	GraphicsCard* MeraGraphiccard = nullptr;
-	
-	cout << "      GraphicCard\n" << endl;
+	system("cls");	
+	cout << "  \t\t\t    GraphicCard\n" << endl;
 	if (g == 1) {
-		cout << "Enter Brand of Graphic Card" << endl;
+		cout << "Enter Brand of Graphic Card:\n1.Nvidia.\n2.AMD." << endl;
 		cin >> brand1;
-		while (brand1 != "Nvidia" && brand1 != "AMD") {
-			if (brand1 != "Nvidia" || brand1 != "AMD") {
+		while (brand1 != "1" && brand1 != "2") {
+			if (brand1 != "1" || brand1 != "2") {
 				cout << " Incorrect card!please enter Nvidia or AMD " << endl;
 				cin >> brand1;
 			}
 		}
-		cout << "Enter size of Graphic Card" << endl;
+		cout << "\nEnter size of Graphic Card" << endl;
 		cin >> size;
 		while (size < 2 || size >24) {
 			if (size < 2 || size>24) {
-				cout << " Incorrect card size! Enter size between 1 to 24" << endl;
+				cout << " Incorrect card size! Enter size between 1 to 24:";
 				cin >> size;
 			}
 		}
 		//	cout << "Enter price of Graphic Card" << endl;
 			//cin >> priceg;
-		if (brand1 == "AMD") {
+		if (brand1 == "2") {
 			AMD* MeraCard = new AMD(brand1, size, 30000);
 			MeraGraphiccard = MeraCard;
 			return MeraGraphiccard;
 
 		}
-		if (brand1 == "Nvidia") {
+		if (brand1 == "1") {
 			Nvidia* MeraCard = new Nvidia(brand1, size, 30000);
 			MeraGraphiccard = MeraCard;
 			return MeraGraphiccard;

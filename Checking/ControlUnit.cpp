@@ -20,13 +20,14 @@ void ControlUnit::show() {
 
 ControlUnit* ControlUnit:: userimplementation(int g) {
 	int hu;
-	cout << "      ControlUnit\n" << endl;
-	cout << "Press 1 if you want to setup Control Unit otherwise press any number" << endl;
+	system("cls");
+	cout << "   \t\t\t   ControlUnit\n" << endl;
+	cout << "Press 1 if you want to setup Control Unit for default setup press any number:";
 	cin >> hu;
 	ControlUnit* MeraCU = nullptr;
 	if (hu == 1) {
 		float clock;
-		cout << "Enter clock" << endl;
+		cout << "Enter clock:";
 		cin >> clock;
 		ControlUnit* MeraCU1 = new ControlUnit(clock);
 		MeraCU = MeraCU1;

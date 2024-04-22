@@ -32,7 +32,8 @@ PhysicalMemory* PhysicalMemory::userimplementation(int g) {
 
 
 		DDR45* MeraPhysicalMemory = nullptr;
-		cout << "Enter capacity for DDR4/5" << endl;
+
+		cout << "Enter capacity for DDR4/5:";
 		cin >> capacityphysical;
 		MeraPhysicalMemory = new DDR45(capacityphysical, "DDR 4/5", 1500); // Constructor with user-defined capacity and memory type
 		return MeraPhysicalMemory;

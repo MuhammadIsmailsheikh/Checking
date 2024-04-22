@@ -48,32 +48,33 @@ static StorageDevice* userimplementation();
 StorageDevice* StorageDevice::userimplementation(int g) {
 
 	//Storagedevice
-	cout << "      StorageDevice\n" << endl;
+	system("cls");
+	cout << "  \t\t\t    StorageDevice\n" << endl;
 	StorageDevice* MeraStorage = nullptr;
 	int brand2;
 	int capacitystorage;
 	double price2;
-	cout << "Enter type of StorageDevice 1 for HDD 2 for SSD" << endl;
+	cout << "Enter type of StorageDevice 1 for HDD 2 for SSD:";
 	cin >> brand2;
 	while ((brand2 != 1) && (brand2 != 2)) {
 		if (brand2 != 1 || brand2 != 2) {
-			cout << "Enter correct storage type" << endl;
+			cout << "Enter correct storage type:";
 			cin >> brand2;
 		}
 	}
 	int hdd;
 	if (brand2 == 1) {
-		cout << "Press 1 for Consumer HDD 2 for NAS HDD" << endl;
+		cout << "Press 1 for Consumer HDD 2 for NAS HDD:";
 		cin >> hdd;
 		while ((hdd != 1) && (hdd != 2)) {
 			if (hdd != 1 || hdd != 2) {
-				cout << "Enter correct HDD types" << endl;
+				cout << "Enter correct HDD types:";
 				cin >> hdd;
 			}
 		}
 	}
 
-	cout << "Enter size of StorageDevice" << endl;
+	cout << "Enter size of StorageDevice:";
 	cin >> capacitystorage;
 	//cout << "Enter price of StorageDevice" << endl;
 	//cin >> price2;
