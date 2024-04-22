@@ -11,7 +11,7 @@ ComputerAssembly::ComputerAssembly(
 	Case *cse=new Case,
 	Computer *computer =new Computer,
 	
-	GraphicsCard *graphicard=new GraphicsCard,
+	
 	
 	NetworkCard* networkcard=new NetworkCard,
 	
@@ -23,8 +23,7 @@ ComputerAssembly::ComputerAssembly(
 	this->cse = cse;
 	this->computer = computer;
 
-	this->graphiccard = graphicard;
-
+	
 	this->networkcard = networkcard;
 	
 	this->powersupply = powersupply;
@@ -42,9 +41,6 @@ void ComputerAssembly::setcomputer(Computer* computer) {
 	this->computer = computer;
 }
 
-void ComputerAssembly::setgraphiccard(GraphicsCard* graphiccard) {
-	this->graphiccard = graphiccard;
-}
 
 void ComputerAssembly::setnetworkcard(NetworkCard* networkcard) {
 	this->networkcard = networkcard;
@@ -72,9 +68,7 @@ Computer &ComputerAssembly::getcomputer() {
 }
 
 
-GraphicsCard& ComputerAssembly::getgraphiccard() {
-	return *graphiccard;
-}
+
 
 NetworkCard& ComputerAssembly::getnetworkcard() {
 	return *networkcard;
