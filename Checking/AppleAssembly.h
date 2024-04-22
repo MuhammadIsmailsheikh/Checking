@@ -22,7 +22,7 @@ public:
 		Computer* computer,
 
 
-		GraphicsCard* graphiccard,
+		
 
 
 		NetworkCard* networkcard,
@@ -34,7 +34,6 @@ public:
 		computer,
 
 
-		graphiccard,
 
 
 		networkcard,
