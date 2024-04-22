@@ -41,7 +41,7 @@ public:
 		Computer *computer,
 	
 		
-		GraphicsCard* graphiccard,
+
 		
 	
 		NetworkCard* networkcard,
@@ -53,7 +53,7 @@ public:
 	void setcase(Case* cse);
 	void setcomputer(Computer* computer);
 	
-	void setgraphiccard(GraphicsCard* graphiccard);
+	
 
 	void setnetworkcard(NetworkCard* networkcard);
 	
@@ -66,7 +66,6 @@ public:
 	Computer& getcomputer();
 
 	
-	GraphicsCard &getgraphiccard();
 
 	NetworkCard& getnetworkcard();
 
